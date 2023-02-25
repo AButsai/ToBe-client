@@ -42,7 +42,6 @@
 .userName {
   font-weight: 500;
   font-size: 15px;
-  border-bottom: 1px solid var(--text-color);
   color: var(--text-color);
   @include for-size(tablet) {
     font-size: 22px;

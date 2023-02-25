@@ -14,7 +14,7 @@ import s from '../../styles/Header.module.scss';
 
 const variants = {
   open: { opacity: 1 },
-  closed: { opacity: 0.8 },
+  closed: { opacity: 0 },
 };
 
 const Header = () => {
@@ -31,15 +31,14 @@ const Header = () => {
 
   const { scrollY } = useScroll();
   const offsetY = [0, 174.5];
-  const heightSizes = [174.5, 140];
-  const mobHeightSizes = [114, 79];
+  const mobHeightSizes = [112, 0];
   const phoneHeight = [35, 0];
 
-  const height = useTransform(scrollY, offsetY, heightSizes);
   const mobHeight = useTransform(scrollY, offsetY, mobHeightSizes);
   const phHeight = useTransform(scrollY, offsetY, phoneHeight);
   const headerOpacity = useTransform(scrollY, [115, 150], [1, 0.8]);
-  const phoneOpacity = useTransform(scrollY, [0, 35], [1, 0]);
+  const phoneOpacity = useTransform(scrollY, [35, 112], [1, 0]);
+  const phoneContainerOpacity = useTransform(scrollY, [0, 35], [1, 0]);
 
   return (
     <motion.header
@@ -54,6 +53,7 @@ const Header = () => {
         <motion.div
           style={{
             height: mobHeight,
+            opacity: phoneContainerOpacity,
           }}
         >
           <motion.div
@@ -80,12 +80,13 @@ const Header = () => {
         <>
           <motion.div
             style={{
-              height: phHeight,
+              height: mobHeight,
+              opacity: phoneContainerOpacity,
             }}
           >
             <Phone />
+            <Logo isLogin={isLogin} />
           </motion.div>
-          <Logo isLogin={isLogin} />
           <Navigation userStatus={userRole} />
         </>
       )}

@@ -104,7 +104,7 @@ const SliderMenu = () => {
 
                       <div className={s.titlesContainer}>
                         <div className={s.titleWrap}>
-                          <h3 className={s.title}>{`${shortTitle()}`}</h3>
+                          <h3 className={s.titleSwiper}>{`${shortTitle()}`}</h3>
                           <span>
                             {vegan && <FaLeaf className={s.iconsLeaf} />}
                           </span>

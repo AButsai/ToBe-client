@@ -16,10 +16,7 @@ import s from '../Style.module.scss';
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
     .required('Please enter your name')
-    .matches(
-      /^(?:[0-9][a-zA-Z0-9 ]*)?[a-zA-Z0-9 ][a-zA-Z0-9 !@#$%^&*(),.?":{}|<>]*$/,
-      'Please use only latin letters and numbers'
-    )
+    .matches(/^[а-яА-ЯёЁa-zA-Z0-9]+$/, 'Please use only letters and numbers')
     .min(3, 'Must be 3 characters or more')
     .max(100, 'Must be no more than 100 characters '),
   email: Yup.string()

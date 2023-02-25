@@ -7,7 +7,7 @@ import s from './DropDownPhone.module.scss';
 
 const variants = {
   open: { opacity: 1 },
-  closed: { opacity: 0.8 },
+  closed: { opacity: 0 },
 };
 
 const DropDownPhone = () => {
