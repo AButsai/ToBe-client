@@ -1,0 +1,38 @@
+@import 'styles/mixins';
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @include for-size(tablet) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.item {
+  position: relative;
+  display: flex;
+  margin: 10px 0px;
+  font-weight: 500;
+  font-size: 22px;
+  @include side-hover;
+  @include transition;
+
+  @include for-size(tablet) {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+.item:hover {
+  @include hover;
+}
+
+.text {
+  margin-left: 3px;
+  cursor: pointer;
+}

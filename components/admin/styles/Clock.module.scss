@@ -1,0 +1,111 @@
+.time {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 250px;
+  transform: translate(-50%, 0);
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.circle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg {
+  position: relative;
+  transform: rotate(270deg);
+}
+
+.circle:nth-child(1) .svg {
+  width: 250px;
+  height: 250px;
+}
+
+.circle:nth-child(2) .svg {
+  width: 210px;
+  height: 210px;
+}
+
+.circle:nth-child(3) .svg {
+  width: 170px;
+  height: 170px;
+}
+
+.circleSvg {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: var(--clr);
+  stroke-width: 5;
+  transform: translate(5px, 5px);
+  opacity: 0.25;
+}
+
+.circle:nth-child(1) .svg .circleSvg {
+  stroke-dasharray: 760;
+  stroke-dashoffset: 760;
+}
+
+.circle:nth-child(2) .svg .circleSvg {
+  stroke-dasharray: 630;
+  stroke-dashoffset: 630;
+}
+
+.circle:nth-child(3) .svg .circleSvg {
+  stroke-dasharray: 510;
+  stroke-dashoffset: 510;
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr), 0 0 40px var(--clr), 0 0 60px var(--clr),
+      0 0 80px var(--clr);
+  }
+}
+
+.timeBox {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: aliceblue;
+  font-family: consolas;
+  font-size: 1.8em;
+  font-weight: bold;
+  gap: 15px;
+
+  & div {
+    color: var(--c);
+    text-shadow: 0 0 10px var(--c), 0 0 20px var(--c);
+  }
+}
+
+.hours::after,
+.minutes::after {
+  content: ":";
+  position: absolute;
+}

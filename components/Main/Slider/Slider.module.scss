@@ -1,0 +1,94 @@
+@import 'styles/mixins';
+
+.container {
+  position: relative;
+}
+
+.swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.swiperPrevBtn,
+.swiperNextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: rgb(255 255 255 / 30%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+
+  @include for-size(tablet) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.swiperPrevBtn {
+  left: 5px;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.swiperNextBtn {
+  right: 5px;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.swiperPrevBtn:hover,
+.swiperNextBtn:hover {
+  opacity: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: translate(0, -50%) scale(0.95);
+  @include transition;
+}
+
+.swiper-pagination-progressbar-fill {
+  background: var(--button) !important;
+}
+
+.icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  @include for-size(tablet) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.imageWrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.sliderWrapper {
+  width: 100%;
+  height: 188px;
+  @include for-size(big-phone) {
+    height: 282px;
+  }
+
+  @include for-size(tablet) {
+    height: 451px;
+  }
+
+  @include for-size(desktop) {
+    height: 753px;
+  }
+}
+
+.imageSwiper {
+  object-fit: cover;
+}

@@ -1,0 +1,26 @@
+.uploadImage {
+  position: relative;
+  transition: background-color var(--duration) var(--animation-name),
+    color var(--duration) var(--animation-name);
+
+  &:hover button {
+    background-color: var(--color-tabs);
+    color: var(--black);
+  }
+}
+
+.inputUpload {
+  position: relative;
+  height: 46px;
+  width: 100%;
+  text-align: right;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.addFolder {
+  @extend .inputUpload;
+  width: 170px;
+  height: 56px;
+}

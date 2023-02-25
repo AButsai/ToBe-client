@@ -1,0 +1,71 @@
+@mixin for-size($size) {
+  @if $size == phone {
+    @media (min-width: 320px) {
+      @content;
+    }
+  } @else if $size == big-phone {
+    @media (min-width: 480px) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+}
+
+@mixin transition($name: all, $daley: null) {
+  transition: $name var(--duration) var(--animation-name) $daley;
+}
+
+@mixin side-hover {
+  background-image: linear-gradient(
+    to left,
+    var(--text-color),
+    var(--text-color) 50%,
+    var(--btn-bg-hover) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin hover {
+  background-position: 0;
+}
+
+@mixin shine-gradient {
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.6) 30%,
+    #000 50%,
+    rgba(0, 0, 0, 0.6) 70%
+  );
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+@mixin shine-gradient-card {
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.501) 50%,
+    rgba(0, 0, 0, 1) 70%
+  );
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -50%;
+  }
+}

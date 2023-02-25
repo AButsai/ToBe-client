@@ -1,0 +1,20 @@
+.header {
+  position: sticky;
+  width: 100%;
+  top:0;
+  background: var(--main-bg);
+  color: var(--text-color);
+  z-index: 20;
+}
+
+.phoneContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.topContainer{
+  padding: 0px 15px;
+  align-items: center;
+}

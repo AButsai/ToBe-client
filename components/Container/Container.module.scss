@@ -1,0 +1,25 @@
+@import 'styles/mixins';
+
+.container {
+  position: relative;
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include for-size(big-phone) {
+    max-width: 480px;
+    padding: 0 16px;
+  }
+  @include for-size(tablet) {
+    max-width: 768px;
+  }
+
+  @include for-size(desktop) {
+    max-width: 1280px;
+    padding: 0 32px;
+  }
+}

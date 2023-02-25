@@ -1,0 +1,166 @@
+@import 'styles/mixins';
+
+.footer {
+  padding: 20px 0;
+  font-size: 14px;
+  color: var(--text-color);
+  box-shadow: var(--btn-bg) 0px 0px 70px 4px;
+  margin-top: 20px;
+
+  @include for-size(big-phone) {
+    font-size: 18px;
+  }
+
+  @include for-size(desktop) {
+    padding: 30px 0;
+  }
+}
+
+.footerLogo {
+  text-align: center;
+  margin-bottom: 10px;
+
+  @include for-size(tablet) {
+    text-align: start;
+  }
+}
+
+.logoLink {
+  font-size: 8px;
+  @include side-hover;
+  @include transition;
+
+  &:hover {
+    @include hover;
+  }
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  fill: var(--btn-bg);
+
+  @include for-size(big-phone) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @include for-size(tablet) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @include for-size(desktop) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.content {
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.addressWrap {
+  display: flex;
+  margin-bottom: 10px;
+
+  @include for-size(tablet) {
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 120px;
+  }
+}
+
+.address {
+  @include for-size(tablet) {
+    margin-right: 50px;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 120px;
+  }
+}
+
+.addressText {
+  font-style: normal;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+  @include side-hover;
+  @include transition;
+}
+
+.addressPhone {
+  @extend .addressText;
+
+  &:hover {
+    @include hover;
+  }
+}
+
+.addressPhoneMB {
+  @extend .addressPhone;
+  margin-bottom: 10px;
+
+  @include for-size(big-phone) {
+    margin-bottom: 20px;
+  }
+
+  @include for-size(tablet) {
+    margin-bottom: 30px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.navItem {
+  display: block;
+  padding: 5px 0;
+  cursor: pointer;
+  @include side-hover;
+  @include transition;
+
+  &:hover {
+    @include hover;
+  }
+
+  @include for-size(desktop) {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.linksWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+.copyrightText {
+  margin-right: 10px;
+}
+
+.copyrightLink {
+  text-decoration: underline;
+}

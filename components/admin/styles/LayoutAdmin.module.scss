@@ -1,0 +1,24 @@
+.section {
+  position: relative;
+  padding: 15px 30px;
+  background-color: var(--main-bg);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  padding: 20px 15px;
+  margin-right: 15px;
+  border-radius: 20px;
+  background-color: var(--bg-admin);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: var(--bg-admin);
+  border-bottom: var(--bg-admin);
+  backdrop-filter: blur(25px);
+  overflow: hidden;
+}

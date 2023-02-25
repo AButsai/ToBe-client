@@ -1,0 +1,52 @@
+@import 'styles/mixins';
+
+.phoneButton{
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--text-color);
+  background-color: transparent;
+}
+
+.dropdown {
+  position: relative;
+  display: block;
+}
+.child {
+  display: none;
+  background-color: var(--main-bg);
+  z-index: 100;
+}
+.child .link {
+  color: white;
+  padding: 4px;
+  text-decoration: none;
+  display: block;
+}
+.child {
+  position: absolute;
+  display: block;
+  z-index: 10;
+}
+
+.phone {
+  font-size: 10px;
+  @include side-hover;
+  @include transition;
+}
+
+.phoneSvg {
+  width: 10px;
+  height: 10px;
+  margin-right: 2px;
+}
+
+.link:hover .phoneSvg {
+  fill: var(--btn-bg-hover);
+}
+
+.link:hover .phone {
+  @include hover;
+}

@@ -1,0 +1,53 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@2gis/mapgl": "^1.32.1",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.10.15",
+    "@mui/styled-engine-sc": "^5.10.14",
+    "@next/bundle-analyzer": "^13.1.2",
+    "@next/font": "^13.1.2",
+    "@react-google-maps/api": "^2.17.0",
+    "@reduxjs/toolkit": "^1.9.0",
+    "app-redux-utils": "^1.8.1",
+    "axios": "^1.2.0",
+    "classnames": "^2.3.2",
+    "formik": "^2.2.9",
+    "framer-motion": "^7.10.0",
+    "imask": "^6.4.3",
+    "next": "latest",
+    "next-redux-wrapper": "^8.1.0",
+    "normalize-scss": "^7.0.1",
+    "normalize.css": "^8.0.1",
+    "popmotion": "^11.0.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "react-input-mask": "^2.0.4",
+    "react-photo-album": "^2.0.0",
+    "react-redux": "^8.0.5",
+    "react-responsive": "^9.0.0",
+    "react-scripts": "^5.0.1",
+    "react-scroll": "^1.8.9",
+    "react-toastify": "^9.1.1",
+    "redux": "^4.2.0",
+    "redux-persist": "^6.0.0",
+    "sharp": "^0.31.3",
+    "styled-components": "^5.3.6",
+    "swiper": "^8.4.5",
+    "yap": "^0.0.2",
+    "yet-another-react-lightbox": "^2.2.7",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^6.5.1",
+    "sass": "^1.56.1"
+  }
+}

@@ -1,0 +1,39 @@
+.modOvelay {
+  z-index: 999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #898b891d;
+  transform: translate(-50%, -50%);
+}
+
+.styleMod {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100px;
+  border-radius: 15px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 25px 45px rgba($color: #000000, $alpha: 0.25);
+  border: 1px solid rgba($color: #000000, $alpha: 0.25);
+  border-right: 1px solid rgba($color: #000000, $alpha: 0.25);
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.25);
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}

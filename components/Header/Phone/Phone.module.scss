@@ -1,0 +1,73 @@
+@import 'styles/mixins';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 25px;
+  @include for-size(big-phone) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @include for-size(tablet) {
+    justify-content: flex-end;
+    padding: 0px 30px;
+  }
+  @include for-size(desktop) {
+    padding: 0px 50px;
+  }
+}
+
+.link {
+  position: relative;
+  padding: 5px 0px;
+  display: flex;
+  align-items: center;
+
+  @include for-size(big-phone) {
+    padding: 10px 5px;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.phoneSvg {
+  width: 10px;
+  height: 10px;
+  margin-right: 2px;
+
+  @include for-size(big-phone) {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+}
+
+.link:hover .phoneSvg {
+  fill: var(--btn-bg-hover);
+}
+
+.phone {
+  font-size: 11px;
+  @include side-hover;
+  @include transition;
+
+  @include for-size(tablet) {
+    font-size: 16px;
+  }
+}
+
+.phone:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+}
+
+.link:hover .phone {
+  @include hover;
+}
