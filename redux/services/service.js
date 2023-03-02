@@ -2,8 +2,7 @@ import axios from 'axios';
 
 // import { isRejectedWithValue } from "@reduxjs/toolkit";
 
-// axios.defaults.baseURL = 'http://localhost:8081/api/';
-axios.defaults.baseURL = 'https://tobeapi.deta.dev/api/';
+axios.defaults.baseURL = 'https://tobeapi-1-t6466481.deta.app/api/';
 
 export const authToken = {
   set: token => {
