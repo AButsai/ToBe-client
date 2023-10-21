@@ -1,0 +1,25 @@
+@import 'styles/mixins';
+
+.section {
+  width: 100%;
+}
+
+.wrap {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  margin: 0 auto;
+  height: 240px;
+  margin-top: 50px;
+
+  @include for-size(tablet) {
+    margin-top: 100px;
+  }
+
+  @include for-size(desktop) {
+  }
+}
+
+.title {
+  color: var(--white);
+}

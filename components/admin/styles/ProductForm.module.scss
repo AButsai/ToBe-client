@@ -1,0 +1,25 @@
+.form {
+  position: relative;
+  width: 440px;
+  padding: 20px;
+  color: var(--color-tabs);
+  border: 1px solid var(--color-tabs);
+  border-radius: 5px;
+}
+
+.inputWrap {
+  margin-top: 20px;
+}
+
+.checkBoxWrap {
+  display: flex;
+  align-items: center;
+}
+
+.errorText {
+  position: absolute;
+  top: 60px;
+  right: 35px;
+  font-size: 14px;
+  color: var(--error);
+}

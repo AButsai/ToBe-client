@@ -1,0 +1,85 @@
+@import 'styles/mixins';
+
+.formText {
+  color: var(--text-color);
+  @include for-size(tablet) {
+    color: var(--color-light-grey);
+  }
+}
+.buttonWrap {
+  text-align: center;
+  @include for-size(big-phone) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.Button {
+  color: var(--text-color);
+  height: 45px;
+  width: 180px;
+  margin-top: 20px;
+  @include for-size(big-phone) {
+    margin-top: 32px;
+    width: 140px;
+  }
+}
+
+.isRequiredField {
+  color: #f25137;
+}
+
+.eye {
+  color: var(--text-color);
+  width: 20px;
+  height: 20px;
+  @include transition;
+  cursor: pointer;
+}
+
+.eyeWrap {
+  position: relative;
+  bottom: -8px;
+  left: 227px;
+  z-index: 99;
+
+  @include for-size(big-phone) {
+    left: 297px;
+  }
+}
+.eye:hover {
+  color: var(--btn-bg-hover);
+}
+
+.inputForm {
+  padding-right: 33px;
+}
+.helpButton {
+  margin-left: 10px;
+}
+
+.errorText {
+  position: absolute;
+  color: var(--error);
+  left: 18px;
+  font-size: 10px;
+  bottom: 165px;
+  @include for-size(big-phone) {
+    bottom: 110px;
+    left: 25px;
+    font-size: 12px;
+  }
+}
+
+.wrapDiferentModal {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.textDiferent {
+  color: var(--text-color);
+  font-size: 15px;
+}
+.line {
+  padding: 1px 0;
+  border-bottom: 1px solid var(--btn-bg-hover);
+}

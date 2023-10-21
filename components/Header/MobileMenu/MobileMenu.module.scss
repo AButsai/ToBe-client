@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.menu {
+  margin-right: 10px;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+.iconMenu {
+  width: 50px;
+  height: 40px;
+}
+
+@keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+.iconClose {
+  width: 50px;
+  height: 45px;
+}

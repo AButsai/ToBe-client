@@ -1,0 +1,65 @@
+.folder {
+  padding: 5px;
+  color: var(--color-tabs);
+  border: 1px solid var(--color-tabs);
+  border-radius: 5px;
+}
+
+.headerWrap {
+  padding: 5px;
+  border-bottom: 1px solid var(--color-tabs);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & .icon {
+    color: var(--error);
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity var(--duration) var(--animation-name);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  & .eye {
+    color: var(--bg-eye);
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity var(--duration) var(--animation-name);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.inputWrap {
+  color: var(--color-tabs);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.uploadImage {
+  position: relative;
+  transition: background-color var(--duration) var(--animation-name),
+    color var(--duration) var(--animation-name);
+
+  &:hover button {
+    background-color: var(--color-tabs);
+    color: var(--black);
+  }
+}
+
+.inputUpload {
+  position: relative;
+  text-align: right;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+  height: 46px;
+  max-width: 200px;
+}

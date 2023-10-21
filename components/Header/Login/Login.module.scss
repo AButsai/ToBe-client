@@ -1,0 +1,65 @@
+@import 'styles/mixins';
+
+.login {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.buttonWrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.isLoginContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  @include for-size(big-phone) {
+    justify-content: center;
+  }
+}
+
+.initialAvatar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: var(--btn-bg-hover);
+  margin-right: 5px;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  @include for-size(tablet) {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+.userName {
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--text-color);
+  @include for-size(tablet) {
+    font-size: 22px;
+  }
+}
+
+.text {
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--text-color);
+  @include for-size(tablet) {
+    font-size: 18px;
+  }
+}
+
+.modalWidth {
+  width: 280px;
+  @include for-size(big-phone) {
+    width: 350px;
+  }
+}

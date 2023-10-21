@@ -1,0 +1,42 @@
+.item {
+  padding: 10px;
+  border: 1px solid var(--color-item);
+  border-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px,
+    rgba(255, 255, 255, 0.3) 0px 7px 13px -3px,
+    rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
+
+  color: var(--color-tabs);
+  background-color: var(--bg-card);
+}
+
+.text {
+  margin-bottom: 5px;
+}
+
+.subText {
+  display: inline-block;
+  width: 50px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid transparent;
+
+  background-color: var(--color-item);
+  &:hover {
+    background-color: var(--color-tabs);
+  }
+}
+
+.form {
+  border: 1px solid var(--color-item);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}

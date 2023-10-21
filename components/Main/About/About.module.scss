@@ -1,0 +1,56 @@
+@import 'styles/mixins';
+
+.wrap {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.sub_title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.text {
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.image {
+  @include for-size(phone) {
+    width: 45%;
+  }
+  @include for-size(tablet) {
+    width: 35%;
+  }
+}
+
+.imageLeft {
+  @extend .image;
+  float: left;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-right: 15px;
+}
+
+.imageRight {
+  @extend .image;
+  float: right;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-left: 15px;
+}

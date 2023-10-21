@@ -1,0 +1,15 @@
+.aside {
+  position: relative;
+  padding: 300px 10px 10px;
+  width: 320px;
+  height: 100%;
+  margin-left: auto;
+  border-radius: 20px;
+  background-color: var(--bg-admin);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: var(--bg-admin);
+  border-bottom: var(--bg-admin);
+  backdrop-filter: blur(25px);
+  overflow: hidden;
+}

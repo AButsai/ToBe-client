@@ -1,0 +1,55 @@
+.container {
+  padding-top: 20px;
+}
+
+.form {
+  position: relative;
+  width: 750px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.errorText {
+  position: absolute;
+  bottom: -25px;
+  font-size: 12px;
+  left: 5px;
+  color: var(--error);
+}
+
+.line {
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-tabs);
+  }
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  height: 190px;
+
+  & .deleteIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--error);
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity var(--duration) var(--animation-name);
+    z-index: 1;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  & .img {
+    object-fit: cover;
+  }
+}
